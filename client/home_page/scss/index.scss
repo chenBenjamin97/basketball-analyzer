@@ -1,0 +1,73 @@
+@import 'config';
+@import 'menu';
+
+/*define for everything that if we will have design/padding inside a box it won't affect the height/width of it*/
+*{
+    box-sizing: border-box;
+}
+
+body{
+    @include background;
+    background: $primary-color;
+    color: #fff;
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+//headings
+h1, h2, h3{
+    margin: 0;
+    font-weight: 400;
+
+    &.large-heading{
+        font-size: 7rem; //each rem is 16 pixels so 6 rem is 6*16 pixels
+    }
+
+    &.small-heading{
+        margin-bottom: 2rem;
+        padding: 0.2rem 1rem; //padding of 0.2rem on the top&bottom and 1rem on left&right
+        background: rgba(lighten($primary-color, 2), 0.5);
+    }
+}
+
+a{
+    color: #fff;
+    text-decoration: none; //remove the link text underline
+}
+
+header{
+    position: fixed; //keep the menu button (my header) at the top of the page even when i scroll
+    z-index: 2; //how close to me an object is. the bigger the number the closer to me
+    width: 100%;
+}
+
+.text-secondary{
+    color: $secondary-color;
+}
+
+main{
+    padding: 4rem;
+    height: 100%;
+
+    .icons{
+        margin-top: 1rem;
+
+        a{
+            padding: 0.4rem;
+
+            &:hover{
+                color: $secondary-color;
+                @include easeOut();
+            }
+        }
+    }
+
+    &#home{
+        overflow: hidden; //cancel scroll bars
+        h1{
+            margin-top: 20vh; //each vh is 1/100 from the screen's height
+        }
+    }
+}

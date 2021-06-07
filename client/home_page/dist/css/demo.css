@@ -1,0 +1,18 @@
+body#background-img {
+    background: url(http://193.106.55.134:80/client/demo_page/images/background_6.jpg);
+    background-attachment: fixed;
+    background-position-y: 50%;
+    background-size: cover; }
+
+.demo_paragraph {
+    line-height: 30px;
+    color: white;
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    border-radius: 5px;
+    background: rgba(23 20 20 / 50%)}
+
+.demo_video {
+    width: 640px;
+    height: 360px;
+}

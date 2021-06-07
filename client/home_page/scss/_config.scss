@@ -1,0 +1,30 @@
+$primary-color: #444; //#444
+$secondary-color: #87d4f8; //#f7e794, #87d4f8
+$show-home-image: true;
+$home-image: url(http://193.106.55.134:80/client/common/image/b.jpg);
+$background-opacity: 0;
+
+@mixin easeOut {
+    transition: all 0.9s ease-out; //make the properties transit slower, like fade
+}
+
+@mixin background {
+    @if $show-home-image{
+        &#background-img{
+            background: $home-image;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        &:after{
+            content: '';
+            position: absolute;
+            top:0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: rgba($primary-color, $background-opacity);
+        }
+    }
+}

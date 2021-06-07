@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="http://193.106.55.134:80/client/home_page/dist/js/index.js"></script>
+    <script src="https://kit.fontawesome.com/b8e4e6d349.js" crossorigin="anonymous"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://193.106.55.134:80/client/home_page/dist/css/index.css" type="text/css">    
+    <link rel="stylesheet" href="http://193.106.55.134:80/client/home_page/dist/css/footer.css" type="text/css">   
+    <link rel="stylesheet" href="http://193.106.55.134:80/client/home_page/dist/css/navbar.css" type="text/css"> 
+    <link rel="stylesheet" href="http://193.106.55.134:80/client/home_page/dist/css/try_it.css" type="text/css"> 
+    <link rel="shortcut icon" href="http://193.106.55.134:80/client/common/image/logo_pkb_icon.ico"/>
+    <title>SPOT THE COURT • Try it</title>
+</head>
+<body id="background-img">
+    <header>
+        <ul class = nav-bar>
+            <li>
+                <a href="http://193.106.55.134:80/client/home_page/dist/index.html">
+                    <img src="http://193.106.55.134:80/client/common/image/logo_without_text.jpg">            
+                </a>
+            </li>
+            <li>
+                <div class="menu-btn">
+                    <div class="btn-line"></div>
+                    <div class="btn-line"></div>
+                    <div class="btn-line"></div>
+                </div>
+            </li>                    
+        </ul>
+
+        <nav class="menu">
+            <!--left half of menu (with logo)-->
+            <div class="menu-branding">
+                <div class="logo">
+                </div>
+            </div>
+            <!--right half of menu (with list of items)-->
+            <ul class="menu-nav">
+                <li class="nav-item">
+                    <a href="http://193.106.55.134:80/client/home_page/dist/index.html" class="nav-link">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="http://193.106.55.134:80/client/demo_page/demo.html" class="nav-link">
+                        demo
+                    </a>
+                </li>
+                <li class="nav-item current">
+                    <a href="http://193.106.55.134:80/client/try_it_page/try_it.html" class="nav-link">
+                        try it yourself
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="http://193.106.55.134:80/client/about_page/about.html" class="nav-link">
+                        about
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="home">
+        <h1 class="large-heading">
+            Spot The<span class="text-secondary"> Court</span>
+        </h1>
+        <h2 class="small-heading">
+            Try it yourself
+        </h2>
+        <div class="try_it_paragraph">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
+                Lectus arcu bibendum at varius vel. Mattis enim ut tellus elementum sagittis vitae et leo.<br>
+                Tristique risus nec feugiat in fermentum posuere urna nec tincidunt. Lectus urna duis convallis convallis tellus id interdum.<br>
+                Turpis egestas maecenas pharetra convallis posuere morbi leo urna molestie.<br>
+                Aenean sed adipiscing diam donec adipiscing tristique. Pharetra massa massa ultricies mi quis hendrerit dolor magna. Donec pretium vulputate sapien nec.<br>
+                Erat pellentesque adipiscing commodo elit at imperdiet dui accumsan.<br>
+                Montes nascetur ridiculus mus mauris vitae ultricies. Et malesuada fames ac turpis egestas maecenas. Dictum sit amet justo donec enim diam vulputate ut pharetra.<br>
+                Donec massa sapien faucibus et molestie ac feugiat. Scelerisque felis imperdiet proin fermentum leo.<br>
+                Cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla. Elit duis tristique sollicitudin nibh sit amet commodo nulla.
+            </p>            
+      </div>
+      <form
+      enctype="multipart/form-data"
+      action="http://193.106.55.134:80/api/Upload"
+      method="post"
+      id="videoUploadForm"
+    >
+      <input id="fileInput" type="file" name="video" accept="video/mp4,video/x-m4v,video/*" required/>
+      <input type="submit" value="upload"/>
+    </form>
+    </main>
+
+</body>
+<!-- Footer Section -->
+<footer>   
+    <div class="footer__container">
+        <section class="social__media">
+        <div class="social__media--wrap">            
+            <p class="website__rights">© SPOT THE COURT 2021. All rights reserved</p>
+            <div class="social__icons">
+            <a href="/" class="social__icon--link" target="_blank"
+                ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="/" class="social__icon--link"
+                ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="/" class="social__icon--link"
+                ><i class="fab fa-youtube"></i
+            ></a>
+            <a href="/" class="social__icon--link"
+                ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="/" class="social__icon--link"
+                ><i class="fab fa-twitter"></i
+            ></a>
+            </div>
+        </div>
+        </section>
+    </div>        
+</footer>
+<script>
+    $('#videoUploadForm').submit(function(e) {        
+        var path = document.getElementById("fileInput").value
+        var splitted = path.split('\\')
+        var video_name = splitted[splitted.length-1]
+       
+        if (video_name.split('.').length > 2) {
+            alert("File's name cannot contain dots (only for extension)");
+            e.preventDefault();
+            return
+        }
+
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var myArr = JSON.parse(this.responseText);
+                for (const name of myArr){
+                    if (name == video_name){
+                        alert("Another file with the exact name already exists, please choose another name");
+                        e.preventDefault();
+                    }
+                }
+            }
+        }            
+        xhttp.open("GET", "http://193.106.55.134:80/api/UserUploadsVideosNames", false);
+        xhttp.setRequestHeader('Access-Control-Allow-Origin', '*');
+        xhttp.send();
+    });
+</script>
+</html>

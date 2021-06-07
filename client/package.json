@@ -1,0 +1,14 @@
+{
+  "name": "spotthecourtapp",
+  "version": "1.0.0",
+  "description": "responsive web application",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w home_page/scss/ -o home_page/dist/css/ --recursive"
+  },
+  "author": "ofry zarfaty",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^6.0.0"
+  }
+}
