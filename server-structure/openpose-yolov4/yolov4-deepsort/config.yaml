@@ -1,0 +1,14 @@
+#Configuration file. Should be located in same directory of executable file.
+http:
+  port: 80
+directory:
+  root: "/home/cs612/openpose-yolov4/yolov4-deepsort/final-project-data/"
+  temp: "/home/cs612/openpose-yolov4/yolov4-deepsort/final-project-data/tmp" #here files will be located while they are being processed (while the function is writing them)
+  ready: "/home/cs612/openpose-yolov4/yolov4-deepsort/final-project-data/analyzed_videos" #analyzed video will be saved in this location when they are ready
+  source: "/home/cs612/openpose-yolov4/yolov4-deepsort/final-project-data/original_videos" #original videos that users have uploaded will be saved here
+  yolov4-deepsort: "/home/cs612/openpose-yolov4/yolov4-deepsort/modified-tracker.py"
+video:
+  prod_format: "mp4" #will be used to stream video to clients 
+frontend:
+  static-files-path: "/home/cs612/final-project/client/"
+  
