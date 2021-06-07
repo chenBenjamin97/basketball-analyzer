@@ -1,4 +1,3 @@
 
 server-structure/openpose-yolov4/yolov4-deepsort/checkpoints/yolov4-416/variables/variables.data-00000-of-00001
-server-structure/openpose-yolov4/yolov4-deepsort/core/yolov4.py
 server-structure/openpose-yolov4/yolov4-deepsort/data/yolov4.weights
