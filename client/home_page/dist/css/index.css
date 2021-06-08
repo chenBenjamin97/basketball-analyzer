@@ -55,7 +55,7 @@
     .menu-branding .logo {
       width: 210px;
       height: 210px;
-      background: url("http://193.106.55.134:80/common/image/logo.jpg");
+      background: url("../img/logo.jpg");
       border-radius: 50%;
       border: solid 7px #87d4f8; }
   .menu .nav-item {
@@ -90,7 +90,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#background-img {
-    background: url(http://193.106.55.134:80/client/common/image/b.jpg);
+    background: url(../../../common/image/background_1.jpg);
     background-attachment: fixed;
     background-size: cover; }
   body:after {
@@ -139,3 +139,11 @@ main {
     overflow: hidden; }
     main#home h1 {
       margin-top: 20vh; }
+
+.index_paragraph {
+  line-height: 30px;
+  color: white;
+  margin-bottom: 2rem;
+  padding: 0.2rem 1rem;
+  border-radius: 5px;
+  background: rgba(23 20 20 / 50%)}

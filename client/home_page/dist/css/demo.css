@@ -1,5 +1,5 @@
 body#background-img {
-    background: url(http://193.106.55.134:80/client/demo_page/images/background_6.jpg);
+    background: url(../../../demo_page/images/background_6.jpg);
     background-attachment: fixed;
     background-position-y: 50%;
     background-size: cover; }

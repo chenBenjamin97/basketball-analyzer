@@ -1,7 +1,7 @@
 $primary-color: #444; //#444
 $secondary-color: #87d4f8; //#f7e794, #87d4f8
 $show-home-image: true;
-$home-image: url(http://193.106.55.134:80/client/common/image/b.jpg);
+$home-image: url(../img/b.jpg);
 $background-opacity: 0;
 
 @mixin easeOut {

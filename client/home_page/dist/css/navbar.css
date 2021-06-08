@@ -80,7 +80,7 @@
       .menu-branding .logo {
         width: 210px;
         height: 210px;
-        background: url("http://193.106.55.134:80/client/common/image/logo.jpg");
+        background: url("../../../common/image/logo.jpg");
         border-radius: 50%;
         border: solid 7px #85cff1; }
 

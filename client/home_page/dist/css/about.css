@@ -1,6 +1,6 @@
 
     body#background-img {
-      background: url(http://193.106.55.134:80/client/about_page/images/hoop1.jpg);
+      background: url(../../../about_page/images/hoop1.jpg);
       background-attachment: fixed;
       background-position-y: 50%;
       background-size: cover; }

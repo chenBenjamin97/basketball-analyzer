@@ -4,22 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="http://193.106.55.134:80/client/home_page/dist/js/index.js"></script>
     <script src="https://kit.fontawesome.com/b8e4e6d349.js" crossorigin="anonymous"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-    <link rel="stylesheet" href="http://193.106.55.134:80/client/home_page/dist/css/index.css" type="text/css">  
-    <link rel="stylesheet" href="http://193.106.55.134:80/client/home_page/dist/css/footer.css" type="text/css">     
-    <link rel="stylesheet" href="http://193.106.55.134:80/client/home_page/dist/css/navbar.css" type="text/css">  
-    <link rel="stylesheet" href="http://193.106.55.134:80/client/home_page/dist/css/demo.css" type="text/css">  
-    <link rel="shortcut icon" href="http://193.106.55.134:80/client/common/image/logo_pkb_icon.ico"/>
+    <link rel="stylesheet" href="../home_page/dist/css/index.css" type="text/css">  
+    <link rel="stylesheet" href="../home_page/dist/css/footer.css" type="text/css">     
+    <link rel="stylesheet" href="../home_page/dist/css/navbar.css" type="text/css">  
+    <link rel="stylesheet" href="../home_page/dist/css/demo.css" type="text/css">  
+    <link rel="shortcut icon" href="../common/image/logo_pkb_icon.ico"/>
     <title>SPOT THE COURT • Demo</title>
 </head>
 <body id="background-img" onload="setVideosOptions()">
     <header>
         <ul class = nav-bar>
             <li>
-                <a href="http://193.106.55.134:80/client/home_page/dist/index.html">
-                    <img src="http://193.106.55.134:80/client/common/image/logo_without_text.jpg">            
+                <a href="../home_page/dist/index.html">
+                    <img src="../common/image/logo_without_text.jpg">            
                 </a>
             </li>
             <li>
@@ -40,22 +39,22 @@
             <!--right half of menu (with list of items)-->
             <ul class="menu-nav">
                 <li class="nav-item">
-                    <a href="http://193.106.55.134:80/client/home_page/dist/index.html" class="nav-link">
+                    <a href="../home_page/dist/index.html" class="nav-link">
                         Home
                     </a>
                 </li>
                 <li class="nav-item current">
-                    <a href="http://193.106.55.134:80/client/demo_page/demo.html" class="nav-link">
+                    <a href="../demo_page/demo.html" class="nav-link">
                         Demo
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="http://193.106.55.134:80/client/try_it_page/try_it.html" class="nav-link">
+                    <a href="../try_it_page/try_it.html" class="nav-link">
                         Try it yourself
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="http://193.106.55.134:80/client/about_page/about.html" class="nav-link">
+                    <a href="../about_page/about.html" class="nav-link">
                         About
                     </a>
                 </li>
@@ -72,30 +71,73 @@
         </h2>
         <div class="demo_paragraph">
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-                Lectus arcu bibendum at varius vel. Mattis enim ut tellus elementum sagittis vitae et leo.<br>
-                Tristique risus nec feugiat in fermentum posuere urna nec tincidunt. Lectus urna duis convallis convallis tellus id interdum.<br>
-                Turpis egestas maecenas pharetra convallis posuere morbi leo urna molestie.<br>
-                Aenean sed adipiscing diam donec adipiscing tristique. Pharetra massa massa ultricies mi quis hendrerit dolor magna. Donec pretium vulputate sapien nec.<br>
-                Erat pellentesque adipiscing commodo elit at imperdiet dui accumsan.<br>
-                Montes nascetur ridiculus mus mauris vitae ultricies. Et malesuada fames ac turpis egestas maecenas. Dictum sit amet justo donec enim diam vulputate ut pharetra.<br>
-                Donec massa sapien faucibus et molestie ac feugiat. Scelerisque felis imperdiet proin fermentum leo.<br>
-                Cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla. Elit duis tristique sollicitudin nibh sit amet commodo nulla.
-            </p>
-            <div>
-                Select Video: <select id="readyVideosToDemo"></select>
-            </div>
-            <video class="demo_video" id="analyzedVideoPlayer" controls autoplay muted loop>
-                <source src="http://193.106.55.134:80/api/Play?name=test3&analyzed=true" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <video class="demo_video" id="sourceVideoPlayer" controls autoplay muted loop>
-                <source src="http://193.106.55.134:80/api/Play?name=test3&analyzed=false" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-      </div>        
+                In this page you can see a demo of our project in action<br>
+                You can see both the analyzed and the original videos shown side-by-side below<br>
+                The annotations you see on the screen represent the elements that are analyzed:<br>                
+            <ul>
+              <li><span style="color: orange;">Orange</span> rectangle represent the ball</li>
+              <li><span style="color: yellow;">Yellow</span> rectangle represent the hoop</li>
+              <li><span style="color: green;">Green</span> and <span style="color: red;">Red</span> rectangles represent the players of both teams</li>
+              <li><span style="color: blue;">Blue</span> rectangle represent the referee</li>
+            </ul>
+            <br>
+                Above each player's bounding box you can see a unique ID number and it's action alongside the probability of it <br>
+                There are various categories of actions, such as: Walk, Run, Defense, Ball in hand, Dribble <br>
+                Lastly, you can choose a video to play using the drop-down list shown below <br>
+                Enjoy! <br>
+                - <span style="font-weight: bold; color: #85cff1">Spot The Court</span> Team
+            </p>                        
+      </div>    
+      <div class="demo_paragraph">
+        <div>
+            <b>Select Video:</b> <select id="readyVideosToDemo"></select>
+        </div>
+        <video class="demo_video" id="analyzedVideoPlayer" controls autoplay muted loop>
+            <source src="http://193.106.55.134:80/api/Play?name=test3&analyzed=true" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video class="demo_video" id="sourceVideoPlayer" controls autoplay muted loop>
+            <source src="http://193.106.55.134:80/api/Play?name=test3&analyzed=false" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>    
     </main>
 </body>
+<script>
+    //select items like the menu button/nav items/menu overlay etc.
+var menuBtn = document.querySelector('.menu-btn');
+var menu = document.querySelector('.menu');
+var menuNav = document.querySelector('.menu-nav');
+var menuBranding = document.querySelector('.menu-branding');
+var navItems = document.querySelectorAll('.nav-item');
+
+//initial state of menu. true is open; false is closed;
+let showMenu = false;
+
+menuBtn.addEventListener('click', toggleMenu);
+
+function toggleMenu(){
+    if(!showMenu){
+        menuBtn.classList.add('close');
+        menu.classList.add('show');
+        menuNav.classList.add('show');
+        menuBranding.classList.add('show');
+        navItems.forEach(item => item.classList.add('show'));
+
+        //set menu state
+        showMenu=true;
+    }
+    else {
+        menuBtn.classList.remove('close');
+        menu.classList.remove('show');
+        menuNav.classList.remove('show');
+        menuBranding.classList.remove('show');
+        navItems.forEach(item => item.classList.remove('show'));
+
+        showMenu=false;
+    }
+}
+</script>>
 <!-- Footer Section -->
 <footer>   
     <div class="footer__container">
