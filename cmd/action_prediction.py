@@ -28,7 +28,7 @@ for i in range(parsed_flags.amount_of_persons_to_predict):
       current_timestamp_joints = line.rstrip().split(";")
       personID = current_timestamp_joints[0]
       del current_timestamp_joints[0] #first value is not a point, it's the person's ID, remove it from sequence
-      current_timestamp_joints = map(lambda x: eval(x), current_timestamp_joints)
+      current_timestamp_joints = map(lambda x: eval(x), current_timestamp_joints) #parse string from standard input to array
       current_timestamp_joints = np.asarray(list(current_timestamp_joints))
       current_timestamp_joints = RobustScaler().fit_transform(current_timestamp_joints)
       current_timestamp_joints = current_timestamp_joints.reshape(parsed_flags.amount_of_person_keypoints*2,) #reshape to one dimensional array
